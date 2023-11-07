@@ -5,7 +5,7 @@ WORKDIR /src
 COPY *.csproj ./
 RUN dotnet restore
 COPY . .
-RUN dotnet publish -c Release -o /app/out
+RUN dotnet publish -c Release -o out
 
 # Runtime Stage
 FROM mcr.microsoft.com/dotnet/aspnet:7.0 AS runtime
